@@ -159,7 +159,7 @@ app.post("/",(req,res)=>{
         service:'gmail',
         auth: {
             user:'eshu0408@gmail.com',
-            pass:'kfvrxzgrqgagmqoe'
+            pass:'**************'
         }
     });
 
@@ -286,7 +286,7 @@ app.post("/addCompany", async (req, res) => {
         service:'gmail',
         auth: {
             user:'eshu0408@gmail.com',
-            pass:'kfvrxzgrqgagmqoe'
+            pass:'**************'
         }
     });
 
