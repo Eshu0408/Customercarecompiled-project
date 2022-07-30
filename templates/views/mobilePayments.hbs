@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Care Website | Mobile Payments Apps Info</title>
+    <link rel="shortcut icon" type="image/png" href="/images/logo.png">
+    <meta name="description" content="Find all Mobile Payment App Companies Customer Care details at CustomerCareCompiled.in">
+	<meta name="keyword" content="customer care number,branch locator,locatebranch,customer care number 24x7,complaint status,24 hour customer care,grievance email id,customer care email id,customer care email id,branch manager contact number,customer service number,customer care number india ,india branch locator,locate india branch,india customer care number,india customer care number 24x7,india complaint status,india 24 hour customer care,india grievance email id,india customer care email id,india customer care email id, india branch manager contact number,customer service number india,list of all mobile payment app companies in india,list of all mobile payment app company in india,  mobile payment app companies in india,mobile payment app company in india">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style1.css">
+    <link rel="stylesheet" href="../css/infopages.css">
+    <link rel="stylesheet" href="../css/heightAdjust.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e4fe4904d1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+{{>navbar}}
+<div class="space-above"></div>
+
+<div class="page-container">
+    <div class="container-inside height-adjust">
+        <h1 class="infopages-heading">Find All Mobile Payment Apps Info Here</h1>
+        <ol id="infopages-list">
+            {{#list_mobilePayments data}}
+            <li class="infopages-list"><a href="/mobilePayments/{{Link}}">{{Name}}</a></li> 
+            {{/list_mobilePayments}}
+
+       
+        </ol>
+ 
+
+    </div>
+</div>
+<div class="space-below"></div>
+
+
+{{>footer}}

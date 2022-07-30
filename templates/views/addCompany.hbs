@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Care Website | Add your own Company/Business Here</title>
+    <link rel="shortcut icon" type="image/png" href="/images/logo.png">
+    <meta name="description" content="Add your own Company/Business details for better reach at CustomerCareCompiled.in">
+	<meta name="keyword" content="customer care number,add your company details on internet, list your own website on internet, add business details, add contact details, add customer care number, add service number, add your company details,list your own website,list your contact details, list your contact number , add your number ">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style1.css">
+    <link rel="stylesheet" href="../css/infopages.css">
+        <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e4fe4904d1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+{{>navbar}}
+<div class="space-above"></div>
+
+<div class="page-container">
+    <div class="container-inside">
+        <h1 class="infopages-heading">Add your own Company/Business Here</h1>
+        
+        
+{{#if message}}
+<div class="alert {{message.type}}" style="background-color: {{message.color}};" >
+        <span class="fas fa-exclamation-circle"></span>
+        <span class="msg">Alert: {{message.alert}}</span>
+        <span class="close-btn">
+            <span class="fas fa-times"></span>
+        </span>
+</div>
+<script>
+
+let alertclose=document.querySelector(".fa-times");
+alertclose.addEventListener("click",()=>{
+let close=alertclose.parentElement.parentElement.classList;
+    close.add("hide");
+    console.log(close)
+})
+
+
+const closefunc=()=>{
+    let alertclose=document.querySelector(".fa-times");
+    let close=alertclose.parentElement.parentElement.classList;
+    close.add("hide");
+}
+setInterval(closefunc,10000);
+</script>
+{{/if}}
+<h4 class="addCompany-notice"> Your Request Will Be Reviewd And You Will Be Notified Within 48 Hours. Once Approved, We Will List Your Company/Business On Our Site And Will Notify Through Mail.</h4>
+        <h4 class="addCompany-note"> Fields marked with asterik (*) are mandatory!</h4>
+        <div class="addCompany">
+       <form class="addCompany-form" action="/addCompany" method="post">
+        <div class="addCompany-fields">
+            <Span class="input1">Company/Business Name*: </Span><input type="text" name="Company" >
+        </div>
+        <div  class="addCompany-fields">
+            <Span class="input2">Contact Number 1*:</Span><input type="text" name="Contact1" >
+        </div>
+        <div  class="addCompany-fields">
+            <Span class="input3">Contact Number 2:</Span><input type="text" name="Contact2">
+        </div>
+        <div  class="addCompany-fields">
+            <Span class="input4">Email ID*:</Span><input type="email" name="Email">
+        </div>
+        <div  class="addCompany-fields">
+            <Span class="input5">Address:</Span><input type="text" name="Address">
+        </div>
+        <div  class="addCompany-fields">
+            <Span class="input6">Website:</Span><input type="text" name="Website">
+        </div>
+        <div  class="addCompany-fields">
+            <Span class="input7">Additional Comments:</Span><textarea name="textarea" minlength="20" id="textarea"  placeholder="Please Type Here..." cols="30" rows="10" ></textarea>
+        </div>
+        <div  class="addCompany-fields submit">
+            <input type="submit" value="Submit">
+        </div>
+
+        </form>
+        </div>
+ 
+    </div>
+</div>
+<div class="space-below"></div>
+
+
+{{>footer}}

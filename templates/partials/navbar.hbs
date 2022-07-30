@@ -1,0 +1,33 @@
+
+    <!----------------------------------- navbar --------------------------->
+   
+    <nav>
+        <div class="logo">
+             <a href="/"><div class="img"></div></a>
+        </div>
+       <h2 class="logohead"><a href="/">CustomerCareCompiled.in</a></h2>
+       <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/addCompany">ADD &nbsp;COMPANY</a></li>
+                <li><a href="/#about">ABOUT &nbsp;US</a></li>
+                <li><a href="/#contact-us">CONTACT &nbsp;US</a></li>
+                <li><a href="/admin">ADMIN</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <script>
+        const toggleButton=document.getElementsByClassName('toggle-button')[0];
+        const navbar=document.getElementsByClassName('navbar')[0];
+
+
+            toggleButton.addEventListener('click',()=>{
+            navbar.classList.toggle('active')
+                })
+    </script>

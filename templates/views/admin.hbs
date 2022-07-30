@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Care Website | Add your own Company/Business Here</title>
+    <link rel="shortcut icon" type="image/png" href="/images/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style1.css">
+    <link rel="stylesheet" href="../css/infopages.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap" rel="stylesheet">
+     <script src="https://kit.fontawesome.com/e4fe4904d1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+{{>navbar}}
+<div class="space-above"></div>
+
+<div class="page-container">
+    <div class="container-inside">
+        <h1 class="infopages-heading">Admin Login</h1>
+
+                    
+{{#if message}}
+<div class="alert {{message.type}}" style="background-color: {{message.color}};" >
+        <span class="fas fa-exclamation-circle"></span>
+        <span class="msg">Alert: {{message.alert}}</span>
+        <span class="close-btn">
+            <span class="fas fa-times"></span>
+        </span>
+</div>
+<script>
+
+let alertclose=document.querySelector(".fa-times");
+alertclose.addEventListener("click",()=>{
+let close=alertclose.parentElement.parentElement.classList;
+    close.add("hide");
+    console.log(close)
+})
+
+
+const closefunc=()=>{
+    let alertclose=document.querySelector(".fa-times");
+    let close=alertclose.parentElement.parentElement.classList;
+    close.add("hide");
+}
+setInterval(closefunc,10000);
+</script>
+{{/if}}
+
+        <div class="admin-login">
+        <form class="contact-us-form admin-login-form"  action="/admin" method="post" >
+            <div class="name  admin-login-input">
+                <i class="fa fa-user-circle  icon"></i>
+                <input type="text" id="name" name="name" placeholder="Enter Your ID">
+            </div>
+            <div class="email admin-login-input">
+                <i class="fa fa-key icon"></i>
+                <input type="password" id="email" name="email" placeholder="Enter Your Password">
+            </div>
+        
+            <button class="btn admin-login-submit">Submit</button>
+        </form>
+        </div>
+    </div>
+ 
+</div>
+<div class="space-below"></div>
+
+
+{{>footer}}

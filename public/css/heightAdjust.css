@@ -1,0 +1,16 @@
+
+@media  (max-width: 1000px){
+    .container-inside{
+ 
+        height: 51rem;
+ 
+    }
+}
+
+@media  (max-width: 420px){
+    .container-inside{
+ 
+        height: 42rem;
+ 
+    }
+}

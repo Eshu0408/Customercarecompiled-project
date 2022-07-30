@@ -1,0 +1,705 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    
+}
+
+ 
+html{
+    width: 100vw;
+    overflow-x: hidden;
+    
+}
+
+/* navbar ==================================== */
+
+nav{
+    display: flex;
+    /* background-image: url(/img/navbar.jpg); */
+    background-color: black;
+    height: 6.875rem; 
+    min-width: 380px; 
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    
+}
+
+nav .logo .img{
+    background-image: url(../images/logo.png);
+    background-size: 100%;
+    height: 6.25rem;
+    width: 6.25rem;
+    filter: invert(0.1);
+    margin: 0.438rem 0.313rem;
+    margin-left: 7.5rem;
+}
+ 
+
+nav .logo .img::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/logo.png);
+    filter: invert(1);
+    background-size: 100%;
+    animation: animate 3.5s ease-in-out infinite;
+    
+}
+
+@keyframes animate
+{
+    0%,100%
+    {
+        height: 0%;
+    }
+    50%
+    {
+        height: 100%;
+    }
+    
+}
+
+nav .logo .img::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background:white ;
+    border-radius: 8px;
+    box-shadow: 0 0 10px white, 0 0 40px white, 0 0 80px white;
+    filter: drop-shadow(0 0 20px white) drop-shadow(0 0 60px white);
+    animation: animate_line 3.5s ease-in-out infinite;
+    
+}
+
+@keyframes animate_line
+{
+    0%,100%
+    {
+        top: 10%;
+    }
+    50%
+    {
+        top: 85%;
+    }
+    
+}
+
+@media  (max-width: 520px){
+    nav .logo .img::after{
+         display: none;
+          
+    }
+ 
+    nav .logo .img::before{
+        display: none;
+    }
+
+    nav .logo .img{
+        filter: invert(1);
+ 
+    }
+}
+
+.logohead{
+    font-family: 'Ibarra Real Nova', serif;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.375rem;
+    margin-left: 0.2rem;
+    
+}
+
+.logohead a{
+    text-decoration: none;
+    color: white;  
+
+}
+
+nav .navbar ul{
+    display: flex;
+    margin: 0.9375rem 13.75rem;
+    
+}
+
+nav .navbar ul li{
+    padding: 1.875rem 0.813rem;
+   list-style-type: none;
+   display:inline-block;
+   white-space:nowrap;  
+}
+
+nav .navbar ul li a{ 
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.688rem 0.813rem;
+    border-radius: 1.125rem;
+ }
+
+ nav .navbar ul li a:hover{ 
+    background-color: white;
+    color: black;
+    
+ }
+
+
+/* Hamburger  */
+
+.toggle-button{
+    position: absolute;
+    top:3rem;
+    left: 3rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+
+}
+
+.toggle-button .bar{
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    opacity: 0.6;
+}
+
+
+
+/* Heading and parallax */
+
+h1{
+    display: flex;
+    font-size: 1.875rem;
+    justify-content: center;
+    align-items: center;
+    margin:0px 0px;
+    color: white;
+    
+}
+
+
+
+.heading{
+    font-family: 'Ibarra Real Nova', serif;
+    background-image: url(/images/contact_background.jpg);
+    height: 12.5rem;
+    width: 100%;
+    background-attachment: fixed;
+}
+
+ /* Section tier1 */
+
+
+
+.tier1{
+    font-family: 'Ibarra Real Nova', serif;
+    margin: 3.75rem 1.875rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.services1{
+    border: 0.125rem solid white;
+    border-radius: 0.625rem;
+    height: 11.225rem;
+    width: 10.875rem;
+
+}
+
+.services1:hover{
+    
+    border: 0.125rem solid rgb(189, 185, 185);
+}
+
+ .services1 img{
+     height: 8.125rem;
+     width: 10.625rem;
+     padding: 1.25rem 1.25rem;
+     cursor: pointer;
+    
+    
+ }
+
+ .service-name1{
+     
+     display: flex;
+     justify-content: center;
+     padding: 0.625rem 0rem;
+     cursor: pointer;
+     
+
+ }
+
+ .service-link{
+     text-decoration: none;
+     color: black;
+ }
+
+ .service-link:hover{
+    color: rgb(85, 82, 82);
+}
+
+
+
+/* About-us */
+
+.about-us{
+    font-family: 'Ibarra Real Nova', serif;
+    background-color: black;
+    color: white;
+}
+
+.about-us h1{
+    padding: 1.25rem ;
+}
+
+.about-us p{
+    padding: 0px 4.375rem;
+    padding-bottom: 2.5rem;
+    text-align: justify;
+}
+
+/* Contact-us */
+
+#contact-us{
+    font-family: 'Ibarra Real Nova', serif;
+
+    color: black;
+    background-image: url(/images/contact_background2.jpg);
+    background-attachment: fixed;
+}
+
+@media  (max-width: 520px){
+    #contact-us{
+        
+        background-image: url(/images/parallax-below2.jpg);
+         
+    }
+}
+
+
+#contact-us h1{
+
+     color: white;
+     padding: 1.25rem ;
+ }
+
+ .contact-us-form{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     
+ }
+
+   .name  input{
+     width: 18.75rem;
+     padding: 0.625rem;
+     margin: 0.625rem 0.625rem;
+     border-radius: 0.625rem;
+ }
+    .email  input{
+    width: 18.75rem;
+    padding: 0.625rem;
+    margin: 0.625rem 0.625rem;
+    border-radius: 0.625rem;
+}
+
+   .message textarea{
+    width: 18.75rem;
+    padding: 0.625rem;
+    margin: 0.625rem 0.625rem;
+    border-radius: 0.625rem;
+    resize: vertical;
+}
+
+.btn{
+    width: 7%;
+    padding: 0.438rem 0.625rem;
+    border-radius: 0.938rem;
+    margin-bottom: 1.25rem;
+    
+}
+
+.icon{
+    font-size: 1.25rem;
+}
+
+.icon-message{
+    font-size: 1.25rem;
+    position: relative;
+    top: -10.313rem;
+}
+
+/* Footer */
+
+#footer{
+    font-family: 'Ibarra Real Nova', serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem ;
+}
+
+.footer{
+    margin-left: 5.313rem;
+    padding: 0 25.625rem;
+}
+
+.footer-rights{
+    font-style: none;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-rights:hover{
+    
+    color: rgb(189, 180, 180);
+    
+}
+
+.icon-social{
+    font-size: 2.188rem;
+    text-align: none;
+    font-style: none;
+    color: white;
+    padding: 0px 0.625rem;
+}
+
+.icon-social:hover{
+    color:rgb(189, 180, 180); 
+}
+
+/* =======================ADD COMPANY=================================== */
+
+
+.addCompany{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.25rem 1.875rem;
+
+}
+
+.addCompany-notice{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0.625rem;
+    background-color: gray;
+    padding-top: 0.5rem;
+    border-radius: 1.25rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    margin-bottom: 0.625rem;
+    margin-top: 1rem;
+}
+
+.addCompany-fields{
+    padding: 0.625rem;
+}
+
+.addCompany-fields input{
+    
+    border-radius: 0.625rem;
+    padding: 0.438rem;
+    margin: 0.625rem 0.625rem;
+    width: 50%;
+}
+
+
+.addCompany-fields textarea{
+    width: 94%;
+    border-radius: 0.625rem;
+    padding: 0.625rem;
+    margin: 0.625rem 0.625rem;
+    resize: vertical;
+     
+
+}
+.addCompany-fields span{
+    font-size: 1.0rem;
+    font-weight: bold;
+}
+
+.addCompany-fields   .input1{
+    margin-left: 0.313rem;
+}
+.addCompany-fields   .input2{
+    margin-left: 0.313rem;
+    margin-right: 3rem;
+}
+
+.addCompany-fields   .input3{
+    margin-left: 0.313rem;
+    margin-right: 3.5rem;
+}
+.addCompany-fields   .input4{
+    margin-left: 0.313rem;
+    margin-right: 7rem;
+}
+.addCompany-fields   .input5{
+    margin-left: 0.313rem;
+    margin-right: 7.938rem;
+}
+.addCompany-fields   .input6{
+    margin-left: 0.313rem;
+    margin-right: 8rem;
+}
+
+.addCompany-fields   .input7{
+    margin-left: 0.313rem;
+    
+  
+}
+
+.addCompany-form .submit{
+    margin-left: 7.813rem;
+    width: 85%;
+    
+}
+
+.addCompany-form .submit input{
+   background-color: black;
+    font-size: 1rem;
+    color: white;
+    border-radius: 1.25rem;
+}
+
+.addCompany-note{
+ 
+    margin: 0.313rem 29.5rem;
+}
+
+
+@media  (max-width: 520px){
+    .addCompany-notice{
+        padding: 1rem;
+        text-align: justify  ;
+        font-size: 0.75rem;
+    }
+
+    .addCompany-form{
+        margin-top: 0rem;
+        border: 1px solid black;
+        border-radius: 15px;
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+    } 
+
+    .addCompany-fields   .input1{
+ 
+        margin-left: 2rem;
+        text-align: center;
+        
+    }
+
+    .addCompany-fields   .input2{
+        margin-left: 2rem;
+        text-align: center;
+        
+    }
+
+    .addCompany-fields   .input3{
+        margin-left: 2rem;
+        text-align: center;
+        
+    }
+
+    .addCompany-fields   .input4{
+        margin-left: 2rem;
+        text-align: center;
+        
+    }
+
+    .addCompany-fields   .input5{
+        margin-left: 2rem;
+        text-align: center;
+        
+    }
+
+    .addCompany-fields   .input6{
+        margin-left: 2rem;
+        text-align: center;
+        
+    }
+
+    .addCompany-fields   .input7{
+        margin-left: 2rem;
+        text-align: center;
+        
+    }
+
+    .addCompany-fields   input{
+         width: 90%;
+    }
+
+    .addCompany-fields textarea{
+        width: 90%;
+    }
+
+
+    .addCompany-form .submit input {
+        margin-left: -4.5rem;
+        width: 70%;
+    }
+
+    .addCompany-note{
+ 
+        margin: 2rem 1rem;  
+        text-align: center;
+        color: black;
+       margin-left: 2;
+
+    }
+    
+
+
+    .about-us p{
+        text-align: justify;
+    }
+    }
+
+
+    @media  (max-width: 1180px){
+        .addCompany-note{
+ 
+            margin: 2rem 1rem;  
+            text-align: center;
+            color: black;
+           margin-left: 2;
+    
+        } 
+
+        .addCompany-form{
+            margin-top: 0rem;
+        
+            margin-left: -0.5rem;
+            margin-right: -0.5rem;
+            
+        } 
+        .addCompany-notice{
+            padding: 5px 15px;
+            align-items: justify;
+      }
+      .addCompany-fields .input1 {
+        margin-left: 0;
+    }
+    }
+
+/* Flash Message */
+
+.alert{
+    
+    padding: 0.938rem 2.5rem;
+    min-width: 26.25rem;
+    margin-top: 0rem ;
+    margin-bottom: 1.25rem;
+       display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+
+}
+
+.alert .fa-exclamation-circle{
+    padding: 0px 0.313rem;
+    font-size: 1.2rem;
+
+}
+
+.alert .close-btn{
+    padding: 0px 0.5rem;
+    margin-top: 0.125rem;
+    cursor: pointer;
+    
+}
+
+.alert .close-btn:hover{
+    color: rgb(64, 63, 63);
+}
+
+@media  (max-width: 520px){
+    .alert .fa-exclamation-circle{
+        padding-left: 1.313rem;
+        padding-right: 0.8rem;
+         
+    
+    }
+
+    #footer{
+        height: 4rem;
+    }
+
+    .footer-rights-all{
+        display: none;
+    }
+
+    .footer{
+        margin-left: 5.313rem;
+        padding: 0 25.625rem;
+    }
+ 
+}
+
+
+
+.hide{
+    display: none;
+}
+
+@media  (max-width: 520px){
+    .alert{
+       padding: 1rem 1rem;
+       margin-left: -1.84rem;
+    }
+
+    
+
+}
+
+
+/* =======================Admin Login=================================== */
+
+.admin-login{
+    background-color: rgb(241, 239, 239);
+    
+    /* border: 2px solid black; */
+    margin: 5rem 28rem;
+    padding: 5rem 0rem;
+    border-radius: 15px;
+     
+}
+
+.admin-login:hover{
+    background-color: rgb(223, 218, 218);
+    
+}
+
+.admin-login-input{
+    margin-top: 1rem;
+}
+
+.admin-login-submit{
+    margin-top: 1rem;
+    width: 22%;
+    background-color: black;
+    color: white;
+}

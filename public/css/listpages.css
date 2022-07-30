@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    
+
+}
+
+.space-above{
+    height: 3.75rem;
+    background-color: rgb(205, 201, 201);
+}
+
+.space-below{
+    height: 3.75rem;
+    background-color: rgb(205, 201, 201);
+}
+
+
+.list-outside{
+    height: auto;
+}
+
+.list-inside{
+    height: auto;
+}
+
+.list-heading1{
+    margin-top: 3.125rem;
+    margin-left: 5rem;
+}
+
+.list-subheading1{
+    margin: 0.313rem 5rem;
+}
+
+.list-content{
+    margin: 0.313rem 5rem;
+}
+
+.list-links{
+    margin: 0.313rem 5rem;
+}
+
+hr {
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+  }
+
+ 
+@media  (max-width: 520px){
+    .list-heading1{
+        margin-top: 2.5rem;
+        margin-left: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .list-content {
+        margin: 0.313rem 2.05rem;
+        font-size: 0.85rem;
+    }
+
+    .list-links {
+        margin: 0.313rem 2.05rem;
+        font-size: 0.85rem;
+    }
+
+    .list-subheading1{
+        margin: 0.313rem 2.05rem;
+        font-size:  0.8rem;
+    }
+}
+
+  .feedbackdiv{
+      display: flex; 
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+       
+  }
+
+  .feedback-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.feedback-heading{
+    color: black;
+    margin-left: 1.875rem;
+    margin-top: 1.25rem;
+
+}
+
+.feedback-subheading{
+    margin-top: 1.25rem;
+    
+}
+input{
+    width: 120%;
+    border-radius: 0.625rem;
+    padding: 0.625rem;
+    margin: 0.625rem 0.625rem;
+}
+
+.feedbackdiv textarea{
+    width: 120%;
+    border-radius: 0.625rem;
+    padding: 0.625rem;
+    margin: 0.625rem 0.625rem;
+    resize: vertical;
+
+}
+
+.feedback-btn{
+    color: white;
+    background-color: black;
+    width: 30%;
+    padding: 0.438rem 0.625rem;
+    border-radius: 0.938rem;
+    margin-bottom: 1.5rem;
+}
+
+.none{
+    display: none;
+}
+
+@media  (max-width: 1180px){
+    .feedback-heading{
+ 
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
+         
+    }
+}
+
+@media  (max-width: 520px){
+    .feedback-heading{
+ 
+        margin-left: 1.2rem;
+        font-size: 1.2rem;
+        text-align: center;
+      
+    }
+
+    .feedback-subheading{
+     
+        font-size: 1rem;
+        
+    }
+
+    .feedbackdiv textarea {
+        width: 95%;
+       
+    }
+    input {
+        width: 95%;
+    }
+}
+

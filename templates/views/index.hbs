@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Care Website</title>
+    <link rel="shortcut icon" type="image/png"  href="/images/logo.png">
+    <meta name="description" content="CustomerCareCompiled.in is a website that contains all the customer care details of Businesses/Companies of different sectors like Banks, Mobile Payment Apps, Automobiles, Telecom Providers, Mobile Phones, Home Appliances, Electronics and E-comm at one place.">
+    <meta name="keyword" content="customer care number, customer care website, customer care number compilation,dambfvwhkevbhebvjqbgjae,customer care online help, customer care number at one place,customer care numbers at one place">
+    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style1.css">
+
+    <script src="js/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/e4fe4904d1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!----------------------------------- navbar --------------------------->
+    <nav>
+        <div class="logo">
+            <a href="/"><div class="img"></div></a>
+            {{!-- <img src="/images/logo.png" alt="Customer Care"> --}}
+        </div>
+         
+        <h2 class="logohead"><a href="/">CustomerCareCompiled.in</a></h2>
+     
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar">
+            <ul class="navbar-list">
+                <li><a href="">HOME</a></li>
+                <li><a href="/addCompany">ADD &nbsp;COMPANY</a></li>
+                <li><a href="#about">ABOUT &nbsp;US</a></li>
+                <li><a href="#contact-us">CONTACT &nbsp;US</a></li>
+                <li><a href="/admin">ADMIN</a></li>
+            </ul>
+        </div>
+    </nav>
+     <!----------------------------------- Brands section --------------------------->
+
+    <section id="brands">
+        <div class="paralax-above"></div>
+        <h1 class="heading">
+            Find Customer Care Info Here
+        </h1>
+        <div class="paralax-below"></div>
+
+        
+        <div class="tier1">
+            <div class="services1" >
+                <a href="/banks" class="service-link"><img src="/images/bank.png" alt="Bank" srcset="">
+                <h3 class="service-name1" >
+                    Banks
+                </h3></a>
+            </div>
+            <div class="services1">
+                <a href="/mobilePayments" class="service-link"><img src="/images/MobilePaayments.png" alt="Mobile Payments" srcset="">
+                <h3 class="service-name1">
+                    Mobile Payments
+                </h3></a>
+            </div>
+            <div class="services1">
+                <a href="/automobiles" class="service-link"><img src="/images/automobiles.png" alt="Automobiles" srcset="">
+                <h3 class="service-name1">
+                    Automobiles
+                </h3></a>
+            </div>
+            <div class="services1">
+                <a href="/telecomProviders" class="service-link"><img src="/images/telecom1.png" alt="Telecom Providers" srcset="">
+                <h3 class="service-name1">
+                    Telecom Providers
+                </h3></a>
+            </div>
+            <div class="services1">
+                <a href="/mobilePhones" class="service-link"><img src="/images/mobile.png" alt="Mobile Phones" srcset="">
+                <h3 class="service-name1">
+                    Mobile Phones
+                </h3></a>
+            </div>
+            <div class="services1">
+                <a href="/homeAppliances" class="service-link"><img src="/images/HomeAppliances.png" alt="Home Appliances" srcset="">
+                <h3 class="service-name1">
+                    Home Appliances
+                </h3></a>
+            </div>
+            <div class="services1">
+                <a href="/electronics" class="service-link"><img src="/images/Electronics.png" alt="Electronics" srcset="">
+                <h3 class="service-name1">
+                    Electronics
+                </h3></a>
+            </div>
+            <div class="services1" id="about">
+                <a href="/e-comm" class="service-link"><img src="/images/E-comm.png" alt="Online Shopping" srcset="">
+                <h3 class="service-name1">
+                    Online Shopping
+                </h3></a>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!----------------------------------- About US section --------------------------->
+
+    <section id="about-us">
+        <div class="about-us">
+            <h1>
+                ABOUT  US
+            </h1>
+            <p>
+                Hi! CustomerCareCompiled.in is a website created by Mr. Eshu V. and it contains all the customer care details of Businesses/Companies of sectors like Banks, Mobile Payment Apps, Automobiles, Telecom Providers, Mobile Phones, Home Appliances, Electronics and E-comm at one place. These details are taken from the official websites of respective Businesses/Companies. If you find any anomaly in details provided, you can contact us about the same. You can also request us for listing your own Business on this website using Add Company Menu.Feel free to contact us in case of any queries. Thanks! Have a good day.
+            </p>
+        </div>
+
+        
+    </section>
+    <!----------------------------------- Contact US section --------------------------->
+
+
+
+    <section id="contact-us">
+            
+{{#if message}}
+<div class="alert {{message.type}}" style="background-color: {{message.color}};" >
+        <span class="fas fa-exclamation-circle"></span>
+        <span class="msg">Alert: {{message.alert}}</span>
+        <span class="close-btn">
+            <span class="fas fa-times"></span>
+        </span>
+</div>
+<script>
+
+let alertclose=document.querySelector(".fa-times");
+alertclose.addEventListener("click",()=>{
+let close=alertclose.parentElement.parentElement.classList;
+    close.add("hide");
+    console.log(close)
+})
+
+
+const closefunc=()=>{
+    let alertclose=document.querySelector(".fa-times");
+    let close=alertclose.parentElement.parentElement.classList;
+    close.add("hide");
+}
+setInterval(closefunc,10000);
+</script>
+{{/if}}
+
+        <div class="contact-us">
+            <h1>
+                CONTACT  US
+            </h1>
+        </div>
+
+        <div class="paralax-above"></div>
+        <form class="contact-us-form" action="/" method="post">
+            <div class="name">
+                <i class="fa fa-user-circle  icon"></i>
+                <input type="text" id="name" name="name" placeholder="Enter Your Name">
+            </div>
+            <div class="email">
+                <i class="fa fa-envelope icon"></i>
+                <input type="email" id="email" name="email" placeholder="Enter Your Email">
+            </div>
+            <div class="message">
+                <i class="fa fa-comment icon-message"></i>
+                <textarea name="textarea"  minlength="20" id="message" cols="30" rows="10" placeholder="Enter Your Message/Feedback"></textarea>
+            </div>
+            <button class="btn">Submit</button>
+        </form>
+        <div class="paralax-below"></div>
+    </section>
+
+     <!-----------------------------------Footer section --------------------------->
+     <footer id="footer">
+         <div class="footer">
+            <a class="footer-rights" href="#"> Copyright &copy; www.CustomerCareCompiled.in  </a>| <a class="footer-rights footer-rights-all" href="#"> All rights reserved </a>
+         </div>
+         <div class="instagram">
+            <a href="https://www.instagram.com/who_eshu/" target="_blank"><i class="fa fa-instagram icon-social "></i></a>
+        </div>
+         <div class="gmail">
+            <a href="mailto:eshu0408@gmail.com" target="_blank"><i class="fa fa-envelope-o icon-social"></i></a>   
+        </div>
+     </footer>
+
+
+</body>
+</html>
